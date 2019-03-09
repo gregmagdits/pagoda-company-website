@@ -1,0 +1,114 @@
+<!doctype html>
+<html class='no-js' lang=''>
+
+<head>
+	<meta charset='utf-8'>
+	<title>Sara Magdits - Let Us Lettuce</title>
+
+	<meta name='description' content=''>
+	<meta name='viewport' content='width=device-width, initial-scale=1'>
+
+	<link rel='manifest' href='site.webmanifest'>
+	<link rel='apple-touch-icon' href='icon.png'>
+	<!-- Place favicon.ico in the root directory -->
+	<link rel='shortcut icon' href='favicon.ico'>
+	<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
+	<link rel='stylesheet' href='css/normalize.css'>
+	<link rel='stylesheet' href='css/skeleton.css'>
+	<link rel='stylesheet' href='css/main.css'>
+
+	<meta name='theme-color' content='#fafafa'>
+</head>
+
+<body>
+<!--[if lte IE 9]>
+<p class='browserupgrade'>You are using an <strong>outdated</strong> browser. Please <a href='https://browsehappy.com/'>upgrade
+	your browser</a> to improve your experience and security.</p>
+<![endif]-->
+
+<!-- CONTENT -->
+<main>
+<article>
+	<section class='section project-page'>
+		<a class='button' href='index.html#projects'><< RETURN</a>
+		<div class='container'>
+			<h1 class='section-heading'>// Let Us Lettuce</h1>
+			<p class='section-description'>Find out what veggies are in season, as well as tasty recipes that use them.</p>
+			<img class='u-max-full-width' src='http://placekitten.com/1000/700' alt='Let Us Lettuce Project'>
+			<div class='row'>
+				<div class='twelve columns'>
+					<h4 class='value-heading'>WHAT IS THIS PROJECT ABOUT?</h4>
+					<p>
+						Before moving on to learning Angular, I wanted to challenge myself to produce a single page application from scratch.
+						Let Us Lettuce was also a chance for me to put ES6 classes to use by modularizing all my services and controllers.
+					</p>
+
+					<p>
+						Upon page load, the Produce service requests a list of produce corresponding to the browser's local time.
+						The produce API, built with node.js and Express, returns JSON data
+						of whatever produce is in season for that month, and the UI controller iterates over the data and dynamically displays
+						a card for each recipe, and handles displaying any errors. Users may then select any produce they like, and search for
+						recipes that make use of it. The Recipe service initiates a call to the Edamam Recipe API, which returns recipes which
+						contain that ingredient.
+					</p>
+
+					<p>
+						In the future, I would like to improve the app by optimizing the recipe search. I would like to see it return
+						recipes that made the most optimal or efficient use of all the available produce, as opposed to just the
+						selected ingredients. It would be cool to see a recipe come up that was the singular embodiment of that season.
+					</p>
+				</div>
+				<aside>
+					<div class='row'>
+						<div class='six columns'>
+							<h2 class='section-heading'>Features</h2>
+							<ul>
+								<li>Updates veggies according to browser's localtime</li>
+								<li>Searches 1.5 million recipes via Edamam Recipe API</li>
+								<li>Single page application using vanilla JavaScript</li>
+								<li>Custom REST API back end</li>
+							</ul>
+						</div>
+						<div class='six columns'>
+							<h2 class='section-heading'>Built With</h2>
+							<ul>
+								<li>node.js</li>
+								<li>Express</li>
+								<li>MongoDB</li>
+								<li>Mongoose</li>
+								<li>Bootstrap</li>
+								<li>Webpack</li>
+								<li>Babel</li>
+							</ul>
+						</div>
+					</div>
+					<div class='row'>
+						<div class='twelve columns'>
+							<!--todo update cultured link-->
+							<a class='button button-primary' href='http://www.letuslettuce.com' target='_blank'>LIVE</a>
+							<a class='button button-primary' href='https://github.com/saramagdits/let-us-lettuce' target='_blank'>CODE</a>
+						</div>
+					</div>
+				</aside>
+			</div>
+		</div>
+		<a class='button' href='index.html#projects'><< RETURN</a>
+	</section>
+</article>
+</main>
+<footer>
+	<nav>
+		<ul>
+			<li><a href='https://github.com/saramagdits' target='_blank'>Github</a></li>
+			<li><a href='https://linkedin.com/in/saramagdits' target='_blank'>LinkedIn</a></li>
+			<li><a href='mailto:saramagdits@gmail.com'>Email</a></li>
+			<li>Baltimore, MD</li>
+		</ul>
+	</nav>
+</footer>
+
+<!--Scripts-->
+
+</body>
+
+</html>

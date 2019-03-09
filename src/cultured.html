@@ -1,0 +1,124 @@
+<!doctype html>
+<html class='no-js' lang=''>
+
+<head>
+	<meta charset='utf-8'>
+	<title>Sara Magdits - JavaScript Developer</title>
+
+	<meta name='description' content=''>
+	<meta name='viewport' content='width=device-width, initial-scale=1'>
+
+	<link rel='manifest' href='site.webmanifest'>
+	<link rel='apple-touch-icon' href='icon.png'>
+	<!-- Place favicon.ico in the root directory -->
+	<link rel='shortcut icon' href='favicon.ico'>
+	<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet'>
+	<link rel='stylesheet' href='css/normalize.css'>
+	<link rel='stylesheet' href='css/skeleton.css'>
+	<link rel='stylesheet' href='css/main.css'>
+
+	<meta name='theme-color' content='#fafafa'>
+</head>
+
+<body>
+<!--[if lte IE 9]>
+<p class='browserupgrade'>You are using an <strong>outdated</strong> browser. Please <a href='https://browsehappy.com/'>upgrade
+	your browser</a> to improve your experience and security.</p>
+<![endif]-->
+
+	<!-- CONTENT -->
+<main>
+	<article>
+		<section class='section project-page'>
+			<a class='button' href='index.html#projects'><< RETURN</a>
+			<div class='container'>
+				<!--todo add under construction icon-->
+				<h1 class='section-heading'>// Cultured</h1>
+				<p class='section-description'>Cultured is an online recipe sharing community where users can share fermentation
+					recipes.</p>
+				<img class='u-max-full-width' src='http://placekitten.com/1000/700' alt='Cultured Project'>
+				<div class='row'>
+					<div class='twelve columns'>
+						<h4 class='value-heading'>WHAT IS THIS PROJECT ABOUT?</h4>
+						<p>
+							I knew my first Angular project had to be something that would really leverage the power that a single page application
+							could deliver. So I chose something that was sufficiently complicated, a social recipe sharing website, and paired it
+							with my love of fermenting things! Thus, Cultured was born.
+						</p>
+
+						<p>
+							In previous projects I'd used MongoDB, but often found myself trying to wrangle the database into working like
+							a relational database. Maybe what I really needed to use was... an actual relational database! Cultured uses
+							PostgreSQL to store all data, including detailed user, recipe, and ingredient data. Modeling the returned
+							data was tricky, as each recipe was associated with user data, and contained multiple ingredients. I considered using an ORM like
+							Sequelize, but decided that making my own would be simple enough for my case, and probably save me a lot of grief.
+						</p>
+
+						<p>
+							I wanted the server to be stateless, so I took a basic auth approach by using passport.js to authenticate
+							the HTTP requests, and pushed the session data onto the client's localStorage. Password encryption is achieved
+							using generating a 60 character hashed password using 10 salt rounds. All pages are accessible by a visitor,
+							except the recipe creation, recipe editing, my recipes, and my profile pages. Authorization is provided for these
+							via an auth-guard middleware which checks credentials for any router request to those pages.
+						</p>
+
+						<p>
+							Learning how to write an Angular application is challenging, but that's why I picked it. It definitely wants you to do
+							things a certain way, and the dependency injection thing can be confusing at first. But after working with it for a bit,
+							I can see how incredibly useful it is. Things like structural directives are awesome. I look forward to working with
+							Angular more as I finish up Cultured.
+						</p>
+					</div>
+					<aside>
+						<div class='row'>
+							<div class='six columns'>
+								<h2 class='section-heading'>Features</h2>
+								<ul>
+									<li>Browse recipes by category, recent, and author</li>
+									<li>Search by ingredient or title</li>
+									<li>Single page Angular application</li>
+									<li>REST API back end</li>
+									<li>User authentication and authorization</li>
+								</ul>
+							</div>
+							<div class='six columns'>
+								<h2 class='section-heading'>Built With</h2>
+								<ul>
+									<li>node.js</li>
+									<li>Express</li>
+									<li>PostgreSQL</li>
+									<li>Angular</li>
+									<li>Angular Material</li>
+								</ul>
+							</div>
+						</div>
+						<div class='row'>
+							<div class='twelve columns'>
+								<!--todo update cultured link-->
+								<a class='button button-primary' href='http://www.cultured.com' target='_blank'>LIVE</a>
+								<a class='button button-primary' href='https://github.com/saramagdits/cultured' target='_blank'>CODE</a>
+							</div>
+						</div>
+					</aside>
+				</div>
+			</div>
+			<a class='button' href='index.html#projects'><< RETURN</a>
+		</section>
+	</article>
+</main>
+<footer>
+	<nav>
+		<ul>
+			<li><a href='https://github.com/saramagdits' target='_blank'>Github</a></li>
+			<li><a href='https://linkedin.com/in/saramagdits' target='_blank'>LinkedIn</a></li>
+			<li><a href='mailto:saramagdits@gmail.com'>Email</a></li>
+			<li>Baltimore, MD</li>
+		</ul>
+	</nav>
+</footer>
+
+<!--Scripts-->
+
+</body>
+
+</html>
