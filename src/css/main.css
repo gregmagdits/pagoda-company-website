@@ -1,3 +1,10 @@
+/* Theme colors
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+/*main: #0ED3A8*/
+/*main-dark: #0CBD97*/
+/*background: #f4f4f4*/
+/*foreground: #fff*/
+
 /* Shared
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .button {
@@ -19,7 +26,12 @@
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 /*background-image: url('http://placekitten.com/1600/1100');*/
 /*background-size: cover;*/
-
+.hero {
+  border-bottom: 1px solid #ddd;
+}
+.nav-header {
+  color: #0ED3A8;
+}
 /* About Me
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .about {
@@ -47,7 +59,9 @@
 }
 /* Contact Me
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-
+.contact-me {
+  border-bottom: 1px solid #ddd;
+}
 /* Footer
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 footer {
