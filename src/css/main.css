@@ -17,23 +17,13 @@
 
 /* Hero
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
-/*.phones {*/
-  /*position: relative;*/
-/*}*/
-/*.phone {*/
-  /*position: relative;*/
-  /*max-width: 80%;*/
-  /*margin: 3rem auto -12rem;*/
-/*}*/
-/*.phone + .phone {*/
-  /*display: none;*/
-/*}*/
+/*background-image: url('http://placekitten.com/1600/1100');*/
+/*background-size: cover;*/
 
 /* About Me
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .about {
-  /*background-image: url('http://placekitten.com/1600/1100');*/
-  /*background-size: cover;*/
+
   background-color: #f4f4f4;
   color: #000;
   padding-bottom: 5rem;
@@ -49,8 +39,6 @@
 /* Projects
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .projects {
-  /*background-image: url('http://placekitten.com/1600/1000');*/
-  /*background-size: cover;*/
   color: #000;
   background-color: #f4f4f4;
 }
@@ -72,8 +60,6 @@ footer a {
 /* Individual Project Pages
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .project-page {
-  /*background-image: url('http://placekitten.com/1600/1000');*/
-  /*background-size: cover;*/
   color: #000;
   background-color: #f4f4f4;
 }
@@ -82,6 +68,28 @@ footer a {
 }
 .project-page .section-description {
   margin-bottom: 4rem;
+}
+
+/* Particles
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+#particles-js canvas {
+  display: block;
+  vertical-align: bottom;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+  opacity: 1;
+  -webkit-transition: opacity .8s ease, -webkit-transform 1.4s ease;
+  transition: opacity .8s ease, transform 1.4s ease
+}
+
+#particles-js {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: -10;
+  top: 0;
+  left: 0
 }
 
 /* Bigger than 550 */
@@ -94,21 +102,6 @@ footer a {
     text-align: left;
     height: 165px;
   }
-  /*.phone {*/
-    /*position: absolute;*/
-    /*top: -7rem;*/
-    /*right: 3rem;*/
-    /*max-height: 362px;*/
-    /*z-index: 3;*/
-  /*}*/
-  /*.phone + .phone {*/
-    /*top: -6rem;*/
-    /*display: block;*/
-    /*max-width: 73.8%;*/
-    /*right: 0;*/
-    /*z-index: 2;*/
-    /*max-height: 338px;*/
-  /*}*/
   .hero-heading {
     font-size: 2.4rem;
   }
@@ -133,15 +126,6 @@ footer a {
     margin-left: auto;
     margin-right: auto;
   }
-  /*.phone {*/
-    /*top: -14rem;*/
-    /*right: 5rem;*/
-    /*max-height: 510px;*/
-  /*}*/
-  /*.phone + .phone {*/
-    /*top: -12rem;*/
-    /*max-height: 472px;*/
-  /*}*/
   .projects {
     padding: 15rem 0 8rem;
   }
@@ -152,22 +136,12 @@ footer a {
   .section {
     padding: 20rem 0 19rem;
   }
+
   .hero {
     padding: 22rem 0;
   }
+
   .hero-heading {
     font-size: 3.0rem;
   }
-  /*.phone {*/
-    /*top: -16rem;*/
-    /*max-height: 615px;*/
-  /*}*/
-  /*.phone + .phone {*/
-    /*top: -14rem;*/
-    /*max-height: 570px;*/
-  /*}*/
-}
-
-#particles-js {
-  height: 800px;
 }
