@@ -88,6 +88,10 @@
 }
 .projects img {
   border: 1px solid #ddd;
+  margin-bottom: 1rem;
+}
+.projects h4 {
+  margin-bottom: 6rem;
 }
 /* Contact Me
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -194,7 +198,9 @@ footer {
   .hero-heading {
     font-size: 2.4rem;
   }
-
+  .projects h4 {
+    font-size: 2rem;
+  }
 }
 
 /* Bigger than 750 */
@@ -224,6 +230,9 @@ footer {
 
   .projects {
     /*padding: 15rem 0 8rem;*/
+  }
+  .projects h4 {
+    font-size: 3rem;
   }
 }
 
