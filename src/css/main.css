@@ -64,10 +64,12 @@
 /* About Me
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .about {
-
   background-color: #f4f4f4;
   color: #000;
   padding-bottom: 5rem;
+}
+.about strong {
+  font-size: 2rem;
 }
 
 /* Toolbox
@@ -215,7 +217,7 @@ footer {
     padding: 10rem 0 15rem;
   }
   .section-description {
-       max-width: 60%;
+       max-width: 70%;
        margin-left: auto;
        margin-right: auto;
      }
@@ -245,7 +247,9 @@ footer {
   .section-description {
     margin-bottom: 15rem;
   }
-
+  .section-description {
+    line-height: 2;
+  }
   .hero {
     padding: 22rem 0;
   }
