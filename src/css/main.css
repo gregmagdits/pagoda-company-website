@@ -114,14 +114,16 @@ footer {
 .nav-footer li a {
   color: #000;
   text-decoration: none;
+  display: inline;
 }
 .nav-footer li i {
   font-size: 2.5em;
 }
 .copyright {
+  color: #000;
   position: absolute;
-  width: 100%;
   line-height: 83px;
+
   font-size: 0.7em;
   text-align: left;
   margin-bottom: 0;
