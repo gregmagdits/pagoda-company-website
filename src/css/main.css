@@ -35,7 +35,7 @@
 .nav-header {
   position: absolute;
   top: 10px;
-  left: 15px;
+  left: 0;
   right: 0;
   bottom: 0;
   text-align: right;
@@ -91,8 +91,42 @@ footer {
   background-color: #f4f4f4;
   color: #000;
 }
-footer a {
+.nav-footer {
+  /*position: absolute;*/
+  /*top: 10px;*/
+  /*left: 15px;*/
+  /*right: 0;*/
+  /*bottom: 0;*/
+  text-align: right;
+  /*height: 20px;*/
+  padding: 10px 20px;
+  color: #0ED3A8;
+}
+.nav-footer ul {
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.nav-footer li {
+  display: inline;
+  list-style-type: none;
+  padding-left: 20px;
+}
+.nav-footer li a {
   color: #000;
+  text-decoration: none;
+}
+.nav-footer li i {
+  font-size: 2.5em;
+}
+.copyright {
+  position: absolute;
+  width: 100%;
+  line-height: 83px;
+  font-size: 0.7em;
+  text-align: left;
+  margin-bottom: 0;
+  /* bottom: 0; */
+  /* padding-left: 10px; */
 }
 /* Individual Project Pages
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
