@@ -149,12 +149,16 @@ footer {
 }
 .project-page .container {
   background-color: #fff;
+  padding: 5rem 2rem;
 }
 .project-page .section-description {
   margin-bottom: 4rem;
 }
 .project-page img {
   border: 1px solid #ddd;
+}
+.project-page .button {
+  margin-top: 1rem;
 }
 
 /* Particles
