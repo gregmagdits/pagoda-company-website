@@ -33,8 +33,28 @@
   color: #fff;
 }
 .nav-header {
+  position: absolute;
+  top: 10px;
+  left: 15px;
+  right: 0;
+  bottom: 0;
+  text-align: right;
+  height: 20px;
+  padding: 10px 20px;
   color: #0ED3A8;
 }
+.nav-header li {
+  display: inline;
+  list-style-type: none;
+  padding-right: 20px;
+}
+.nav-header li a {
+  text-decoration: none;
+}
+.nav-header li i {
+  font-size: 2.5em;
+}
+
 /* About Me
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .about {
