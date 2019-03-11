@@ -119,6 +119,9 @@ footer {
   text-decoration: none;
   display: inline;
 }
+.nav-footer li a:hover {
+  color: #333333;
+}
 .nav-footer li i {
   font-size: 2.5em;
 }
