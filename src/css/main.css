@@ -32,6 +32,11 @@
 .hero-header {
   color: #fff;
 }
+.hero-header img {
+  /*border-radius: 50%;*/
+  border: 2px solid #fff;
+  /*width: 200px;*/
+}
 .nav-header {
   position: absolute;
   top: 10px;
