@@ -90,6 +90,8 @@
 footer {
   background-color: #f4f4f4;
   color: #000;
+  position: absolute;
+  width: 100%;
 }
 .nav-footer {
   /*position: absolute;*/
@@ -107,6 +109,7 @@ footer {
   margin-bottom: 1.5rem;
 }
 .nav-footer li {
+  color: #000;
   display: inline;
   list-style-type: none;
   padding-left: 20px;
