@@ -85,6 +85,9 @@
 .projects .section-description {
   margin-bottom: 4rem;
 }
+.projects img {
+  border: 1px solid #ddd;
+}
 /* Contact Me
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .contact-me {
@@ -147,7 +150,9 @@ footer {
 .project-page .section-description {
   margin-bottom: 4rem;
 }
-
+.project-page img {
+  border: 1px solid #ddd;
+}
 /* Particles
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 #particles-js canvas {
