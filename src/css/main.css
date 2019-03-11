@@ -14,12 +14,13 @@
 /* Sections
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .section {
-  padding: 8rem 0 7rem;
+  padding: 5rem 0 7rem;
   text-align: center;
 }
 .section-heading,
 .section-description {
-  margin-bottom: 1.2rem;
+  /*margin-bottom: 4rem;*/
+  margin-bottom: 5rem;
 }
 
 /* Hero
@@ -179,8 +180,12 @@ footer {
 /* Bigger than 550 */
 @media (min-width: 550px) {
   .section {
-    padding: 12rem 0 11rem;
+    padding: 10rem 0 11rem;
   }
+  .section-heading,
+     .section-description {
+       margin-bottom: 10rem;
+     }
   .hero {
     padding-bottom: 12rem;
     text-align: left;
@@ -189,6 +194,7 @@ footer {
   .hero-heading {
     font-size: 2.4rem;
   }
+
 }
 
 /* Bigger than 750 */
@@ -200,25 +206,35 @@ footer {
     font-size: 2.6rem;
   }
   .section {
-    padding: 14rem 0 15rem;
+    padding: 10rem 0 15rem;
   }
+  .section-description {
+       max-width: 60%;
+       margin-left: auto;
+       margin-right: auto;
+     }
+  .section-heading,
+  .section-description {
+    margin-bottom: 10rem;
+  }
+
   .hero {
     padding: 16rem 0 14rem;
   }
-  .section-description {
-    max-width: 60%;
-    margin-left: auto;
-    margin-right: auto;
-  }
+
   .projects {
-    padding: 15rem 0 8rem;
+    /*padding: 15rem 0 8rem;*/
   }
 }
 
 /* Bigger than 1000 */
 @media (min-width: 1000px) {
   .section {
-    padding: 20rem 0 19rem;
+    padding: 15rem 0 19rem;
+  }
+  .section-heading,
+  .section-description {
+    margin-bottom: 15rem;
   }
 
   .hero {
