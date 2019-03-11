@@ -149,12 +149,26 @@ footer {
 }
 .project-page .container {
   background-color: #fff;
+  padding: 5rem 2rem;
 }
 .project-page .section-description {
-  margin-bottom: 4rem;
+  margin-bottom: 5rem;
 }
+/*.project-page .section-header {*/
+  /*margin-bottom: 2.5rem;*/
+/*}*/
+ .project-page h2.section-heading {
+   margin-bottom: 2.5rem;
+ }
 .project-page img {
   border: 1px solid #ddd;
+  margin-bottom: 5rem;
+}
+.project-page .features, .built-with {
+  margin-bottom: 2.5rem;
+}
+.project-page .button {
+  margin-top: 1rem;
 }
 
 /* Particles
@@ -199,6 +213,9 @@ footer {
   }
   .projects h4 {
     font-size: 2rem;
+  }
+  .project-page .section-heading, .section-description {
+    margin-bottom: 5rem;
   }
 }
 
