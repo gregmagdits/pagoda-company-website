@@ -19,7 +19,6 @@
 }
 .section-heading,
 .section-description {
-  /*margin-bottom: 4rem;*/
   margin-bottom: 5rem;
 }
 
@@ -78,7 +77,6 @@
   border-bottom: 1px solid #ddd;
 }
 
-
 /* Projects
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .projects {
@@ -95,11 +93,13 @@
 .projects h4 {
   margin-bottom: 6rem;
 }
+
 /* Contact Me
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .contact-me {
   border-bottom: 1px solid #ddd;
 }
+
 /* Footer
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 footer {
@@ -109,13 +109,7 @@ footer {
   width: 100%;
 }
 .nav-footer {
-  /*position: absolute;*/
-  /*top: 10px;*/
-  /*left: 15px;*/
-  /*right: 0;*/
-  /*bottom: 0;*/
   text-align: right;
-  /*height: 20px;*/
   padding: 10px 20px;
   color: #0ED3A8;
 }
@@ -145,6 +139,7 @@ footer {
   padding-left: 0;
   margin-top: 0.5em;
 }
+
 /* Individual Project Pages
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .project-page {
@@ -160,6 +155,7 @@ footer {
 .project-page img {
   border: 1px solid #ddd;
 }
+
 /* Particles
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 #particles-js canvas {
@@ -225,13 +221,8 @@ footer {
   .section-description {
     margin-bottom: 10rem;
   }
-
   .hero {
     padding: 16rem 0 14rem;
-  }
-
-  .projects {
-    /*padding: 15rem 0 8rem;*/
   }
   .projects h4 {
     font-size: 3rem;
