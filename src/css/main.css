@@ -28,6 +28,7 @@
   background-image: url('../img/leaves.png');
   background-size: cover;
   border-bottom: 1px solid #ddd;
+  padding: 8rem 0 4em;
 }
 .hero-header {
   color: #fff;
