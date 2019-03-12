@@ -36,7 +36,11 @@
 .hero-header img {
   /*border-radius: 50%;*/
   border: 2px solid #fff;
+  margin-bottom: 2rem;
   /*width: 200px;*/
+}
+.hero-heading {
+  font-size: 2rem;
 }
 .nav-header {
   position: absolute;
@@ -76,6 +80,9 @@
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .toolbox {
   border-bottom: 1px solid #ddd;
+}
+.toolbox ul {
+  margin-bottom: 5rem;
 }
 
 /* Projects
