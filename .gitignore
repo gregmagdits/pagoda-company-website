@@ -6,3 +6,4 @@ src/\.editorconfig
 src/img/saraMagditsResume\.pdf
 
 content\.txt
+node_modules/

@@ -1,49 +1,149 @@
-particlesJS('particles-js', {
-  'particles': {
-    'number': {'value': 5, 'density': {'enable': true, 'value_area': 800}},
-    'color': {'value': '#0ED3A8'},
-    'shape': {
-      'type': 'edge',
-      'stroke': {'width': 0, 'color': '#000000'},
-      'polygon': {'nb_sides': 3},
-      'image': {'src': 'img/github.svg', 'width': 100, 'height': 100}
+var WIDTH;
+var HEIGHT;
+var canvas;
+var con;
+var g;
+var pxs = new Array();
+var rint = 50;
+
+// Email code
+document.getElementById('sendEmailButton').addEventListener('onclick',sendEmail);
+function checkEmailParams(){
+  var message = document.getElementById('messageInput').value;
+  var reply = document.getElementById('emailInput').value;
+  if (!message){
+    alert('Please enter text in the message body');
+    return false;
+  }
+  if (!reply){
+    alert('Please enter your email address so I can respond to your email');
+    return false;
+  }
+  return true;
+}
+function getAddress(){
+  return 'gregmagdits A '.replace(' A ', '@') + 'gmail.com';
+}
+function sendEmail(){
+
+  if (!checkEmailParams()){
+    return;
+  }
+  AWS.config.update({region: 'us-east-1'});
+  var creds = new AWS.Credentials('<access-key-here>', '<secret-key-here>' );
+  AWS.config.credentials = creds;
+
+  // Create sendEmail params
+  var params = {
+    Destination: { /* required */
+      ToAddresses: [
+        getAddress()
+      ]
     },
-    'opacity': {
-      'value': 0.75,
-      'random': false,
-      'anim': {'enable': false, 'speed': 1, 'opacity_min': 0.1, 'sync': false}
+    Message: { /* required */
+      Body: { /* required */
+        Text: {
+          Charset: "UTF-8",
+          Data: 'From : ' + document.getElementById('emailInput').value + '\r\n' + document.getElementById('messageInput').value
+        }
+      },
+      Subject: {
+        Charset: 'UTF-8',
+        Data: document.getElementById('subjectInput').value || 'Email From Pagoda Tech Website'
+      }
     },
-    'size': {
-      'value': 6,
-      'random': true,
-      'anim': {'enable': false, 'speed': 7, 'size_min': 2, 'sync': false}
-    },
-    'line_linked': {'enable': false, 'distance': 150, 'color': '#ffffff', 'opacity': 0.4, 'width': 1},
-    'move': {
-      'enable': true,
-      'speed': 3,
-      'direction': 'none',
-      'random': false,
-      'straight': false,
-      'out_mode': 'out',
-      'bounce': false,
-      'attract': {'enable': false, 'rotateX': 600, 'rotateY': 1200}
-    }
-  },
-  'interactivity': {
-    'detect_on': 'canvas',
-    'events': {
-      'onhover': {'enable': false, 'mode': 'repulse'},
-      'onclick': {'enable': false, 'mode': 'push'},
-      'resize': true
-    },
-    'modes': {
-      'grab': {'distance': 400, 'line_linked': {'opacity': 1}},
-      'bubble': {'distance': 400, 'size': 40, 'duration': 2, 'opacity': 8, 'speed': 3},
-      'repulse': {'distance': 200, 'duration': 0.4},
-      'push': {'particles_nb': 4},
-      'remove': {'particles_nb': 2}
-    }
-  },
-  'retina_detect': true
+    Source: getAddress(), /*required*/
+    ReplyToAddresses: [
+          document.getElementById('emailInput').value
+        ]
+  };
+
+  // Create the promise and SES service object
+  var sendPromise = new AWS.SES({apiVersion: '2010-12-01'}).sendEmail(params).promise();
+
+  // Handle promise's fulfilled/rejected states
+  sendPromise.then(
+      function(data) {
+        document.location.href = '#';
+        alert('Thank you for your interest in Pagoda Tech. Your email was sent and I will respond to you as quickly as possible');
+        document.getElementById('contactForm').reset();
+        console.log(data.MessageId);
+      }).catch(
+      function(err) {
+        alert('There was an error and the email was not sent. Please try again later')
+        console.error(err, err.stack);
+      });
+}
+
+// Fireflies code
+window.addEventListener('load', function(){
+  WIDTH = window.innerWidth;
+  HEIGHT = window.innerHeight;
+  canvas = document.getElementById('pixie');
+  canvas.width = WIDTH;
+  canvas.height = HEIGHT;
+  //$(canvas).attr('width', WIDTH).attr('height',HEIGHT);
+  con = canvas.getContext('2d');
+  for(var i = 0; i < 50; i++) {
+    pxs[i] = new Circle();
+    pxs[i].reset();
+  }
+  setInterval(draw,rint);
 });
+
+function draw() {
+  con.clearRect(0,0,WIDTH,HEIGHT);
+  for(var i = 0; i < pxs.length; i++) {
+    pxs[i].fade();
+    pxs[i].move();
+    pxs[i].draw();
+  }
+}
+
+function Circle() {
+  this.s = {ttl:8000, xmax:5, ymax:2, rmax:10, rt:1, xdef:960, ydef:540, xdrift:4, ydrift: 4, random:true, blink:true};
+
+  this.reset = function() {
+    this.x = (this.s.random ? WIDTH*Math.random() : this.s.xdef);
+    this.y = (this.s.random ? HEIGHT*Math.random() : this.s.ydef);
+    this.r = ((this.s.rmax-1)*Math.random()) + 1;
+    this.dx = (Math.random()*this.s.xmax) * (Math.random() < .5 ? -1 : 1);
+    this.dy = (Math.random()*this.s.ymax) * (Math.random() < .5 ? -1 : 1);
+    this.hl = (this.s.ttl/rint)*(this.r/this.s.rmax);
+    this.rt = Math.random()*this.hl;
+    this.s.rt = Math.random()+1;
+    this.stop = Math.random()*.2+.4;
+    this.s.xdrift *= Math.random() * (Math.random() < .5 ? -1 : 1);
+    this.s.ydrift *= Math.random() * (Math.random() < .5 ? -1 : 1);
+  }
+
+  this.fade = function() {
+    this.rt += this.s.rt;
+  }
+
+  this.draw = function() {
+    if(this.s.blink && (this.rt <= 0 || this.rt >= this.hl)) this.s.rt = this.s.rt*-1;
+    else if(this.rt >= this.hl) this.reset();
+    var newo = 1-(this.rt/this.hl);
+    con.beginPath();
+    con.arc(this.x,this.y,this.r,0,Math.PI*2,true);
+    con.closePath();
+    var cr = this.r*newo;
+    g = con.createRadialGradient(this.x,this.y,0,this.x,this.y,(cr <= 0 ? 1 : cr));
+    g.addColorStop(0.0, 'rgba(238,180,28,'+newo+')');
+    g.addColorStop(this.stop, 'rgba(238,180,28,'+(newo*.2)+')');
+    g.addColorStop(1.0, 'rgba(238,180,28,0)');
+    con.fillStyle = g;
+    con.fill();
+  }
+
+  this.move = function() {
+    this.x += (this.rt/this.hl)*this.dx;
+    this.y += (this.rt/this.hl)*this.dy;
+    if(this.x > WIDTH || this.x < 0) this.dx *= -1;
+    if(this.y > HEIGHT || this.y < 0) this.dy *= -1;
+  }
+
+  this.getX = function() { return this.x; }
+  this.getY = function() { return this.y; }
+}

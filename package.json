@@ -4,6 +4,7 @@
   "description": "portfolio",
   "main": "index.js",
   "dependencies": {
+    "aws-sdk": "^2.532.0",
     "html5-boilerplate": "^7.0.1"
   },
   "devDependencies": {},

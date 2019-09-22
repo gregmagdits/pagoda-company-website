@@ -60,6 +60,7 @@
 }
 .nav-header li a {
   text-decoration: none;
+  color: white;
 }
 .nav-header li i {
   font-size: 2.5em;
@@ -257,11 +258,11 @@ footer {
 /* Bigger than 1000 */
 @media (min-width: 1000px) {
   .section {
-    padding: 15rem 0 19rem;
+    padding: 10rem 0 10rem;
   }
   .section-heading,
   .section-description {
-    margin-bottom: 15rem;
+    margin-bottom: 5rem;
   }
   .section-description {
     line-height: 2;
@@ -272,5 +273,65 @@ footer {
 
   .hero-heading {
     font-size: 3.0rem;
+    color: white;
   }
+}
+
+/* fireflies
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+#header {
+  overflow:hidden;
+  position:relative;
+  /*height: 100%;*/
+  /*width: 100%;*/
+  background: #000000 url(/portfolio/src/img/pagoda10.jpg) 50% 50% no-repeat;
+  background:-ms-linear-gradient(top, #000, #257eb7);
+  background:-moz-linear-gradient(top, #000, #257eb7);
+  /* background:-webkit-linear-gradient(top, #000, #021522); */
+  background:linear-gradient(top, #000, #257eb7);
+  filter:progid:DXImageTransform.Microsoft.gradient(startColorStr='#040429', EndColorStr='#257eb7');
+  -ms-filter:"progid:DXImageTransform.Microsoft.gradient(startColorStr='#040429', EndColorStr='#257eb7')";
+}
+#header > .containter {
+  z-index:10;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.expertise-list-container{
+  font-weight: bold;
+  text-align: left;
+}
+
+.hero-heading.hero-established{
+  font-size: initial;
+}
+
+.expertise-list{
+  margin-left: 5%;
+}
+
+.logo{
+  font-family: 'Pattaya', sans-serif;
+  font-size: 10rem;
+}
+@font-face {
+  font-family: "Pattaya";
+  src: url('/portfolio/src/fonts/Pattaya-Regular.ttf');
+  font-weight:400;
+}
+
+nav > ul > img{
+  max-height: 100px;
+  max-width: 400px;
+  float: left;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 178px;
+  max-height: 150px;
 }
